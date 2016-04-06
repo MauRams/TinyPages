@@ -1,0 +1,80 @@
+/*Maurice's styling for index and ourwork pages*/
+
+#heading{
+	font-size: 1.5em;
+	letter-spacing: 0.8em;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#text_box1{/* left box on index page with dummy text*/
+	margin: 35px;
+	color: #16657b;
+	width: 40%;
+	max-width: 960px;
+	float: left;
+	padding: 10px;
+	background-color: #e9f3f6;
+	border-radius: 25px;
+	box-shadow: 0 0 20px 2px #d3d3d3;/*Deniss border shadow code*/
+}
+
+#text_box2{/* right box on index page with dummy text*/
+	margin:35px;
+	padding: 10px;
+	color: #16657b;
+	width: 40%;
+	max-width: 960px;
+	float: right;
+	background-color: #e9f3f6;
+	border-radius: 25px;
+	box-shadow: 0 0 20px 2px #d3d3d3;/*Deniss border shadow code*/
+}
+
+.para{
+	color: #000000;
+	float: right;
+}
+
+h3{
+	text-align: center;
+	color: #eaeaea;
+	font-family: oxygen;
+	
+}
+
+.pic{
+	margin: 5%;
+	display: block;
+	width: 70%;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/***************************************The below code is for the image gallery for the our work page*************************************************************************/
+table{
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #16657b;
+	color:#16657b;
+	border-radius:10px;
+	height:495px;
+}
+
+.examples{
+	width: 220px;
+	height: 135px;
+	transition: all .5s ease-in-out;
+	border: 1px black solid;
+}
+
+.examples:hover{
+	transform: scale(2.5);
+}
+
+.big_logo{
+	width: 400px;
+	padding: 10px 0 0 30px;
+}

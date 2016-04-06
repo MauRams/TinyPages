@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Contacts</title>
+		<link href='http://fonts.googleapis.com/css?family=Oxygen:700,400' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+		<link href="style.css" type="text/css" rel="stylesheet"><!--master stylesheet-->
+		<!-- Thats the script for google map -->
+		<script src="https://maps.googleapis.com/maps/api/js"></script>
+		<script>
+			<!-- <!-- All this is for map to work plus extra parameters to make it show area which needed --> -->
+
+			function initialize() {
+				var mapCanvas = document.getElementById('map-canvas');
+				var mapOptions = {
+				<!-- GIVES COORDINATES FOR MARION SQUARE -->
+				center: new google.maps.LatLng(53.3492335,-6.2432608),
+				zoom: 18,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+				}
+				var map = new google.maps.Map(mapCanvas, mapOptions)
+			
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+			</script>
+			
+	<script>
+function validateForm() {
+   <!-- IF THE NAME FIELD IS EMPTY -->
+   var m = document.forms["EmailForm"]["name"].value;
+    if (m==null || m=="") {
+        alert("First name must be filled out");
+        return false;
+    }
+	  <!-- IF THE EMAIL FIELD IS EMPTY -->
+	var x = document.forms["EmailForm"]["e-mail"].value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=y.length) {
+        alert("Not a valid e-mail address");
+        return false;
+    }
+}
+</script>
+<!-- ADDING JQUERY FADE IN -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(function(){
+    $("#areafade").fadeIn(2500);;
+  });
+});
+</script>
+	</head>
+	<body>
+		<!-- ADDING HEADDER TAG FROM HTML5 -->
+		<header>
+			<img class="logo" src="img/tinylogo3.png" alt ="company logo">
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="ourwork.html">Our Work</a></li>
+					<li><a href="aboutus.html">About Us</a></li><!--use unordered lists for the links-->
+					<li><a href="contacts.html" class="active">Contact</a></li>
+				</ul>
+			</nav>	
+		</header>
+		<!-- THIS BREAK MAKES GAP -->
+		<br>
+		<!-- THIS IS A DIV AROUND AREA FOR CREATING SHADOW AROUND IT -->
+		<div id="shadow">
+		<div id="topline">
+			<br>
+			<h2 class="head-h1">Contacts</h2>
+
+		</div>
+		<hr>
+		<div id="area">
+		<div id="areafade">
+			<div id="form">
+				<h2 class="head-h3">Contact form:</h2>
+				<p></p>
+				<form id="form-data" onsubmit="return validateForm()" action="mailto:denmantm@inbox.lv" 
+				method="POST"
+				enctype="multipart/form-data"
+				name="EmailForm">
+					Your Name:
+					<br>
+					<input type="text" size="20" name="name"><br><br>
+					Your e-mail:
+					<br>
+					<input type="text" size="20" name="e-mail"><br><br>
+					Subject:
+					<br>
+					<input type="text" size="20" name="subject"><br><br>
+					Your message:
+					<br>
+					<textarea name="message" rows="10" cols="30">Please feel free to contact us!</textarea>
+					<br><br>
+					<input type="submit" value="Send">
+				</form>
+			</div>
+			<!-- GOOGLE MAP DIV -->
+			<div id="mapwrap">
+			<h2 class="head-map">Where to find us:</h2>
+				<div id="map-canvas"></div>
+				<p class="p1">At the moment our hypothetical WebDev 
+				company can be found at Merion Square, NCI. Feel free to visit US! </p>
+			</div>
+			<div id="info">
+				<h2 class="head-h2">Contact team member:</h2>
+				<div class="icont">
+				<img class="icon" src="img/icon/Phone.png" alt="phone icon">
+				<p class="p2">Maurice Ramsbottom:</p>
+				</div>
+				<div class="icont">
+				<img class="icon" src="img/icon/email.jpg" alt="email icon">
+				<p class="p2">emailadress@emailadress.con</p>
+				</div>
+				<div class="icont">
+				<img class="icon" src="img/icon/Phone.png" alt="phone icon">
+				<p class="p2">Deniss Strods:</p>
+				</div>
+				<div class="icont">
+				<img class="icon" src="img/icon/email.jpg" alt="email icon">
+				<p class="p2">emailadress@emailadress.con</p>
+				</div>
+				<div class="icont">
+				<img class="icon" src="img/icon/Phone.png" alt="phone icon">
+				<p class="p2">Kenneth Powers</p>
+				</div>
+				<div class="icont">
+				<img class="icon" src="img/icon/email.jpg" alt="email icon">
+				<p class="p2">emailadress@emailadress.con</p>
+				</div>
+				
+			</div>
+			<div id="info2">
+			<h2 class="head-h2">Tyny Pages head office:</h2>
+				<div class="icont">
+				<img class="icon" src="img/icon/Phone.png" alt="phone icon">
+				<p class="p2">892-2323-2323</p>
+				</div>
+				<div class="icont">
+				<img class="icon" src="img/icon/email.jpg" alt="email icon">
+				<p class="p2">emailadress@emailadress.con</p>
+				</div>
+				<div class="icont">
+				<img class="icon" src="img/icon/adress.jpg" alt="house icon">
+				<p class="p2">Doblin city, D1, Merion Square, NCI</p>
+				</div>
+				</div>
+			</div>
+		</div>
+			
+		<hr>
+		<div id="bottomline">
+		<br>
+		<footer>&copy; Tiny Pages Ltd 2014</footer>
+		</div>
+		</div>
+	</body>
+</html>
